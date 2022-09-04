@@ -36,7 +36,7 @@ body {
 
 .sidebar > div {
     display: grid;
-    grid-template-columns: 40px 1fr;
+    grid-template-columns: 30px 1fr;
     gap: 0.5em;
     align-items: center;
 }
@@ -80,7 +80,7 @@ input{
 }
 
 input:focus{
-    border: 1px solid hsl(var(--blue));
+    box-shadow: 0 0 3px hsl(var(--blue));
 }
 
 .button-container, .user-container{
@@ -108,6 +108,7 @@ button:hover {
 	grid-template: 1fr 1fr / 3fr 1fr;
 	gap: 1em;
 	padding: 1em 2em 2em 1em;
+    align-items: stretch;
 }
 
 .projects {
@@ -138,15 +139,15 @@ button:hover {
 }
 
 .text-block {
-    padding: 2em 4em 0 1em;
+    padding: 2em 4em 0 2em;
 }
 
 .actions-block{
     display: grid;
     grid-auto-flow: column;
-    gap: 1em;
+    gap: 2em;
     justify-content: right;
-    padding: 0 1em 1em 1em;
+    padding: 0 2em 1em 1em;
 }
 
 .announcements-grid {
@@ -167,7 +168,8 @@ button:hover {
     display: grid;
     grid-template: repeat(4, 1fr) / 1fr;
     gap: 0.5em;
-    padding: 1em 2em;
+    justify-items: center;
+    padding: 1em;
 }
 
 .trend{
@@ -177,7 +179,7 @@ button:hover {
     align-items: center;
 }
 
-.trend > div:first-child{
+.trend > img:first-child{
     grid-area: span 2;
 }
 
@@ -187,14 +189,6 @@ button:hover {
 
 .card, .announcements-grid, .trending-grid, .header{
     box-shadow: 2px 4px 5px hsl(0, 0%, 0%, 0.1);
-}
-
-.icon{
-    width: 40px;
-    height: 40px;
-    background-color: hsl(var(--yellow));
-    border-radius: 100%;
-    aspect-ratio: 1 / 1;
 }
 
 .clickable:hover{
@@ -222,4 +216,13 @@ p{
 a {
     color: inherit;
     text-decoration: none;
+}
+
+svg {
+    cursor: pointer;
+}
+
+img {
+    width: 40px;
+    cursor: pointer;
 }
